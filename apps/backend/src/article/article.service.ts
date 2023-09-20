@@ -8,7 +8,8 @@ import { Article } from './article.entity';
 import { IArticleRO, IArticlesRO, ICommentsRO } from './article.interface';
 import { Comment } from './comment.entity';
 import { CreateArticleDto, CreateCommentDto } from './dto';
-
+// The ArticleService needs to be able to access the Tag entity
+import { Tag } from '../tag/tag.entity';
 @Injectable()
 export class ArticleService {
   constructor(
@@ -19,6 +20,9 @@ export class ArticleService {
     private readonly commentRepository: EntityRepository<Comment>,
     @InjectRepository(User)
     private readonly userRepository: EntityRepository<User>,
+    // Inject the Tag entity
+    @InjectRepository(Tag)
+    private readonly tagRepository: EntityRepository<Tag>,
   ) {}
 
   async findAll(userId: number, query: Record<string, string>): Promise<IArticlesRO> {
@@ -156,6 +160,21 @@ export class ArticleService {
     const article = new Article(user!, dto.title, dto.description, dto.body);
     article.tagList.push(...dto.tagList);
     user?.articles.add(article);
+    // GPT-4's instructions:
+    // Retrieve the existing tags from the tagRepository
+    // For each tag in the dto.tagList, check if it exists in the tagRepository
+    // If it does not exist, create a new Tag entity and add it to the tagRepository
+    const tags = await this.tagRepository.findAll();
+    dto.tagList
+      .filter((item) => !tags.find((tag) => tag.tag.toLocaleLowerCase() === item.toLocaleLowerCase()))
+      .map((item) => {
+        const newTag = new Tag();
+        newTag.tag = item;
+        return newTag;
+      })
+      .forEach((item) => {
+        this.tagRepository.create(item);
+      });
     await this.em.flush();
 
     return { article: article.toJSON(user!) };
