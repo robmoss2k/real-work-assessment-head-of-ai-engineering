@@ -1,11 +1,15 @@
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
+// GPT-4 indicated we should import ValidationPipe from @nestjs/common and use it setGlobalPrefix.
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const appOptions = { cors: true };
   const app = await NestFactory.create(AppModule, appOptions);
-  app.setGlobalPrefix('api');
+  // Now we use the ValidationPipe to setGlobalPrefix.
+  // old code: app.setGlobalPrefix('api');
+  app.setGlobalPrefix('api').useGlobalPipes(new ValidationPipe({ transform: true }));
 
   const options = new DocumentBuilder()
     .setTitle('NestJS Realworld Example App')
