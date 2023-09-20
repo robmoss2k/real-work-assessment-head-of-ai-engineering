@@ -2,7 +2,9 @@ export interface IUserData {
   bio: string;
   email: string;
   image?: string;
-  token: string;
+  // Make the token property optional, as required by the Rosters component.
+  // old code: token: string;
+  token?: string;
   username: string;
 }
 

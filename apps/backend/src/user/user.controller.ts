@@ -48,4 +48,18 @@ export class UserController {
     const user = { email, token, username, bio, image };
     return { user };
   }
+
+  // Write a method that:
+  // Handles GET requests to the 'users' endpoint.
+  // Utilizes an injected userService with a findAll method to retrieve all users.
+  // For each user, extracts and returns only the properties: email, username, bio, and image.
+  // The returned array should have the format { user: { email, username, bio, image } } for each user.
+  @Get('users')
+  async findAll(): Promise<IUserRO[]> {
+    const users = await this.userService.findAll();
+    return users.map((user) => {
+      const { email, username, bio, image } = user;
+      return { user: { email, username, bio, image } };
+    });
+  }
 }
