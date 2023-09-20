@@ -40,3 +40,8 @@ testem.log
 Thumbs.db
 
 .angular
+
+# Others
+.yarn/**
+package-lock.json
+.yarnrc.yml
