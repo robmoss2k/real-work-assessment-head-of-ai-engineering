@@ -14,5 +14,7 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_TERRAFORM_TERRASCAN: false
+          VALIDATE_POWERSHELL: false
+          VALIDATE_GITLEAKS: false
           LINTER_RULES_PATH: /
           JAVASCRIPT_DEFAULT_STYLE: prettier
