@@ -1,0 +1,14 @@
+[sqlfluff]
+dialect = athena
+max_line_length = 120
+exclude_rules = L016
+large_file_skip_byte_limit = 0
+
+[sqlfluff:rules]
+allow_scalar = True
+single_table_references = consistent
+unquoted_identifiers_policy = all
+
+[sqlfluff:indentation]
+indent_unit = space
+tab_space_size = 4
