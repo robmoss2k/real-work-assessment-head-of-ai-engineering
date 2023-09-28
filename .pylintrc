@@ -1,0 +1,26 @@
+[BASIC]
+bad-names = map,filter
+good-names = i,j,k,e,ex,Run,_,id,rv,c,do_GET
+
+[FORMAT]
+max-line-length = 120
+max-module-lines = 1000
+indent-after-paren = 4
+
+[MASTER]
+jobs = 1
+extension-pkg-whitelist = pydantic
+ignore-paths = .*\.nox/.*
+recursive = y
+
+[REPORTS]
+output-format = colorized
+
+[SIMILARITIES]
+min-similarity-lines = 4
+ignore-comments = yes
+ignore-docstrings = yes
+ignore-imports = no
+
+[VARIABLES]
+dummy-variables-rgx = _$|dummy
