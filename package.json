@@ -57,7 +57,7 @@
     "@ngrx/router-store": "16.0.1",
     "@ngrx/store": "16.0.1",
     "@nx/angular": "16.6.0",
-    "axios": "^1.0.0",
+    "axios": "^1.6.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
     "core-js": "3.31.0",
