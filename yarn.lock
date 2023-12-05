@@ -9801,6 +9801,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^1.6.0":
+  version: 1.6.1
+  resolution: "axios@npm:1.6.1"
+  dependencies:
+    follow-redirects: ^1.15.0
+    form-data: ^4.0.0
+    proxy-from-env: ^1.1.0
+  checksum: 573f03f59b7487d54551b16f5e155d1d130ad4864ed32d1da93d522b78a57123b34e3bde37f822a65ee297e79f1db840f9ad6514addff50d3cbf5caeed39e8dc
+  languageName: node
+  linkType: hard
+
 "axobject-query@npm:3.1.1":
   version: 3.1.1
   resolution: "axobject-query@npm:3.1.1"
@@ -11812,7 +11823,7 @@ __metadata:
     "@types/slug": ^5.0.4
     "@typescript-eslint/eslint-plugin": 5.62.0
     "@typescript-eslint/parser": 5.62.0
-    axios: ^1.0.0
+    axios: ^1.6.0
     class-transformer: ^0.5.1
     class-validator: ^0.14.0
     core-js: 3.31.0
