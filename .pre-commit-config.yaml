@@ -107,11 +107,6 @@ repos:
     hooks:
       - id: cfn-lint
         files: template.*\.(json|yaml|yml)$
-  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.7.3
-    hooks:
-      - id: editorconfig-checker
-        alias: ec
   - repo: https://github.com/PyCQA/flake8
     rev: 7.0.0
     hooks:
