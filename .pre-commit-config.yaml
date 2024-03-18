@@ -1,7 +1,7 @@
 ---
 repos:
   - repo: https://github.com/psf/black
-    rev: 24.2.0
+    rev: 24.3.0
     hooks:
       - id: black
         args:
@@ -12,7 +12,7 @@ repos:
     hooks:
       - id: blacken-docs
         additional_dependencies:
-          - black==24.2.0
+          - black==24.3.0
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.10.0
     hooks:
@@ -36,7 +36,7 @@ repos:
     hooks:
       - id: isort
   - repo: https://github.com/myint/autoflake
-    rev: v2.3.0
+    rev: v2.3.1
     hooks:
       - id: autoflake
         args:
@@ -52,7 +52,7 @@ repos:
         stages:
           - commit
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.16.0
+    rev: v3.18.4
     hooks:
       - id: commitizen
         stages:
@@ -70,11 +70,11 @@ repos:
           - -i
           - E006
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.9.0.6
+    rev: v0.10.0.1
     hooks:
       - id: shellcheck
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.0.0-beta.1
+    rev: v9.0.0-beta.2
     hooks:
       - id: eslint
   - repo: https://github.com/gitleaks/gitleaks
@@ -103,7 +103,7 @@ repos:
     hooks:
       - id: actionlint
   - repo: https://github.com/aws-cloudformation/cfn-lint
-    rev: v0.85.3
+    rev: v0.86.0
     hooks:
       - id: cfn-lint
         files: template.*\.(json|yaml|yml)$
@@ -125,7 +125,7 @@ repos:
       - id: markdownlint
       - id: markdownlint-fix
   - repo: https://github.com/sqlfluff/sqlfluff
-    rev: 2.3.5
+    rev: 3.0.2
     hooks:
       - id: sqlfluff-lint
       - id: sqlfluff-fix
