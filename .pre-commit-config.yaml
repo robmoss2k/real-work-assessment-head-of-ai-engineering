@@ -52,7 +52,7 @@ repos:
         stages:
           - commit
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.25.0
+    rev: v3.26.0
     hooks:
       - id: commitizen
         stages:
@@ -74,7 +74,7 @@ repos:
     hooks:
       - id: shellcheck
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.2.0
+    rev: v9.3.0
     hooks:
       - id: eslint
   - repo: https://github.com/gitleaks/gitleaks
@@ -99,11 +99,11 @@ repos:
     hooks:
       - id: yamllint
   - repo: https://github.com/Mateusz-Grzelinski/actionlint-py
-    rev: v1.6.27.13
+    rev: v1.7.0.14
     hooks:
       - id: actionlint
   - repo: https://github.com/aws-cloudformation/cfn-lint
-    rev: v0.87.2
+    rev: v0.87.3
     hooks:
       - id: cfn-lint
         files: template.*\.(json|yaml|yml)$
@@ -112,7 +112,7 @@ repos:
     hooks:
       - id: flake8
   - repo: https://github.com/golangci/golangci-lint
-    rev: v1.58.1
+    rev: v1.58.2
     hooks:
       - id: golangci-lint
   - repo: https://github.com/hadolint/hadolint
