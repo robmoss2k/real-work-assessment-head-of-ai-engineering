@@ -52,7 +52,7 @@ repos:
         stages:
           - commit
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.26.0
+    rev: v3.27.0
     hooks:
       - id: commitizen
         stages:
@@ -112,7 +112,7 @@ repos:
     hooks:
       - id: flake8
   - repo: https://github.com/golangci/golangci-lint
-    rev: v1.58.2
+    rev: v1.59.0
     hooks:
       - id: golangci-lint
   - repo: https://github.com/hadolint/hadolint
@@ -120,12 +120,12 @@ repos:
     hooks:
       - id: hadolint
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.40.0
+    rev: v0.41.0
     hooks:
       - id: markdownlint
       - id: markdownlint-fix
   - repo: https://github.com/sqlfluff/sqlfluff
-    rev: 3.0.6
+    rev: 3.0.7
     hooks:
       - id: sqlfluff-lint
       - id: sqlfluff-fix
