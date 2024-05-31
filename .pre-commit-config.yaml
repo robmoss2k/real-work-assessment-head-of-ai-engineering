@@ -99,11 +99,11 @@ repos:
     hooks:
       - id: yamllint
   - repo: https://github.com/Mateusz-Grzelinski/actionlint-py
-    rev: v1.7.0.14
+    rev: v1.7.1.15
     hooks:
       - id: actionlint
   - repo: https://github.com/aws-cloudformation/cfn-lint
-    rev: v0.87.3
+    rev: v0.87.4
     hooks:
       - id: cfn-lint
         files: template.*\.(json|yaml|yml)$
