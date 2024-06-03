@@ -74,11 +74,11 @@ repos:
     hooks:
       - id: shellcheck
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.3.0
+    rev: v9.4.0
     hooks:
       - id: eslint
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.2
+    rev: v8.18.3
     hooks:
       - id: gitleaks
   - repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
