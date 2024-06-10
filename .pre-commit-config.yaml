@@ -26,7 +26,7 @@ repos:
     hooks:
       - id: debug-statements
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.2
+    rev: v3.16.0
     hooks:
       - id: pyupgrade
         args:
@@ -103,7 +103,7 @@ repos:
     hooks:
       - id: actionlint
   - repo: https://github.com/aws-cloudformation/cfn-lint
-    rev: v0.87.4
+    rev: v0.87.5
     hooks:
       - id: cfn-lint
         files: template.*\.(json|yaml|yml)$
@@ -112,7 +112,7 @@ repos:
     hooks:
       - id: flake8
   - repo: https://github.com/golangci/golangci-lint
-    rev: v1.59.0
+    rev: v1.59.1
     hooks:
       - id: golangci-lint
   - repo: https://github.com/hadolint/hadolint
