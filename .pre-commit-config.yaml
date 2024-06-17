@@ -74,11 +74,11 @@ repos:
     hooks:
       - id: shellcheck
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.4.0
+    rev: v9.5.0
     hooks:
       - id: eslint
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.3
+    rev: v8.18.4
     hooks:
       - id: gitleaks
   - repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
@@ -103,12 +103,12 @@ repos:
     hooks:
       - id: actionlint
   - repo: https://github.com/aws-cloudformation/cfn-lint
-    rev: v0.87.5
+    rev: v0.87.7
     hooks:
       - id: cfn-lint
         files: template.*\.(json|yaml|yml)$
   - repo: https://github.com/PyCQA/flake8
-    rev: 7.0.0
+    rev: 7.1.0
     hooks:
       - id: flake8
   - repo: https://github.com/golangci/golangci-lint
